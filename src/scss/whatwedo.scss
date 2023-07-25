@@ -1,0 +1,118 @@
+@import "_variables";
+
+.whatwedo {
+  &__titles {
+
+  }
+
+  &__subtitle {
+
+  }
+
+  &__title {
+    margin-bottom: 4vh;
+
+  }
+
+  &__services {
+
+  }
+}
+
+.services {
+  &__filter {
+    margin-bottom: 9vh;
+  }
+
+  &__examples {
+
+  }
+}
+
+.filter {
+  &__list {
+    display: flex;
+    gap: 4vw;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    width: 206px;
+    background-color: $dark-green;
+    color: $white;
+    box-sizing: border-box;
+    border: solid 5px $dark-green;
+    border-radius: 20px;
+
+    &_choosed {
+      background-color: $white;
+      color: $dark-green;
+    }
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.6em;
+  }
+}
+
+.examples {
+  &__list {
+    display: flex;
+    gap: 7%;
+  }
+
+  &__item {
+    max-width: 477px;
+    width: 30%;
+  }
+}
+
+.service {
+  padding: 30px 40px;
+  border: none;
+  border-radius: 60px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+
+  &__content {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  &__picture {
+
+  }
+
+  &__description {
+
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 2.4em;
+  }
+
+  &__text {
+    font-size: 1.8em;
+    line-height: 28px;
+  }
+
+  &_choosed {
+    background-color: $brown;
+    color: $white;
+
+    &  .service__picture path {
+      fill: $white;
+    }
+  }
+}

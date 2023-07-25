@@ -1,0 +1,16 @@
+@import "_variables";
+
+.successful {
+  display: flex;
+  gap: 50px;
+
+  &__content {
+
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 5em;
+    line-height: 65px;
+  }
+}

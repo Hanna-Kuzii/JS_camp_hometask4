@@ -1,0 +1,52 @@
+@import "_variables";
+
+.header {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    margin-right: 20vw;
+  }
+
+  &__img {
+  }
+
+  &__navigation {
+  }
+
+  &__sign {
+    margin-left: 3.3vw;
+  }
+}
+
+.navigation {
+  width: 40vw;
+
+  &__list {
+    display: flex;
+    gap: 2vw;
+    justify-content: space-between;
+  }
+
+  &__item {
+    // font-family: $open-sans;
+    color: $black;
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+
+  &__link {
+  }
+}
+
+.sign {
+  &__button {
+    padding: 5px 19px;
+    background-color: #caa892;
+    font-weight: 600;
+    font-size: 1.6em;
+    color: $white;
+    border: none;
+    border-radius: 15px 0;
+  }
+}

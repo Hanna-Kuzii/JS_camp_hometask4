@@ -1,0 +1,35 @@
+@import "_variables";
+
+.hero {
+  display: flex;
+
+  &__content {
+    padding-top: 70px;
+    margin-right: 1vw;
+  }
+
+  &__subtitle {
+    font-family: $open-sans;
+  }
+
+  &__title {
+    font-size: 7.2em;
+  }
+
+  &__text {
+    margin-bottom: 3vh;
+  }
+
+  &__button {
+
+  }
+
+  &__picture {
+
+  }
+
+  &__image {
+    max-width: 715px;
+    width: 37vw;
+  }
+}

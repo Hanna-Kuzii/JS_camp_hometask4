@@ -1,0 +1,111 @@
+@import '_reset';
+@import'_variables';
+
+body {
+  font-family: $open-sans;
+  font-size: 10px;
+}
+
+.main {
+  padding: 10vh 15vw 0 14vw;
+
+  &__header {
+    margin-bottom: 8.5vh;
+  }
+
+  &__hero {
+    margin-bottom: 20vh;
+  }
+
+  &__whatwedo {
+    margin-bottom: 40vh;
+  }
+
+  &__aboutus {
+    margin-bottom: 20vh;
+  }
+
+  &__successful {
+    margin-bottom: 20vh;
+  }
+
+  &__statistic {
+    margin-bottom: 10vh;
+  }
+
+  &__testimonials {
+    margin-bottom: 20vh;
+  }
+
+  &__news {
+
+  }
+
+  &__signup {
+    margin-bottom: 90px;
+  }
+
+  &__footer {
+    margin: 0 -15vw 0 -14vw;
+  }
+}
+
+.content {
+  &__subtitle {
+    margin-bottom: 1.3vh;
+    font-family: $poppins;
+    font-size: 2em;
+    font-weight: 600;
+    color: $dark-grey;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 2.5vh;
+    font-family: $poppins;
+    font-size: 4.8em;
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__text {
+    // font-family: $open-sans;
+    color: $dark-grey;
+    font-size: 1.8em;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  &__button {
+    padding: 19px 30px;
+    background-color: $dark-green;
+    color: $white;
+    border: none;
+    border-radius: 20px 0;
+    font-weight: 600;
+    font-size: 1.8em;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    max-width: 679px;
+    width: 35vw;
+    border-radius: 140px 0;
+  }
+}
+
+.logo {
+
+}
+
+
+@import 'header';
+@import 'hero';
+@import 'whatwedo';
+@import 'aboutus';
+@import 'successful';
+@import 'statistic';
+@import 'testimonials'; 
+@import 'news';
+@import 'signup';
+@import 'footer';

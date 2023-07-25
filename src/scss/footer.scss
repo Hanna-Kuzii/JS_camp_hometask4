@@ -1,0 +1,90 @@
+@import "_variables";
+
+.footer {
+  padding: 8vh 20vw 0 14vw;
+  background-color: $background-grey;
+  font-size: 1.8em;
+  line-height: 40px;
+  color: $dark-grey;
+
+  &__container {
+    margin-bottom: 6vh;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  hr {
+    margin-left: -14vw;
+    width: 100vw;
+  }
+
+  &__company {
+    width: 27%;
+  }
+
+  &__links {
+    width: 51%;
+  }
+
+  svg {
+    width: 37px;
+
+    path {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 100%;
+      fill: #d5d5d5;
+
+      &:hover {
+        fill: $dark-green;
+      }
+    }
+  }
+
+  &__copyright {
+    margin: 15px auto;
+    text-align: center;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 9%;
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 1.333em;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    // gap: 15px;
+  }
+
+  &__item {
+    font-weight: 500;
+    // font-size: 1.8em;
+    // line-height: 40px;
+  }
+
+  &__link {
+  }
+}
+
+.social {
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.333em;
+  }
+
+  &__links {
+    display: flex;
+    gap: 17px;
+  }
+}

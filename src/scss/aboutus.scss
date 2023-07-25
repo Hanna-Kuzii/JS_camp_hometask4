@@ -1,0 +1,23 @@
+@import "_variables";
+
+.aboutus {
+  display: flex;
+  gap: 7vw;
+
+  &__picture {
+
+  }
+
+  &__content {
+
+  }
+
+  &__subtitle {
+    margin-bottom: 55px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+}

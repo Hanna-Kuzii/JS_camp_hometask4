@@ -1,0 +1,41 @@
+@import "_variables";
+
+.news {
+  padding: 90px 0;
+  background-color: $background-grey;
+
+  &__titles {
+    text-align: center;
+  }
+
+  &__notes {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__post {
+
+  }
+}
+
+.post {
+  &__image {
+    margin-bottom: 59px;
+    max-width: 554px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 17px;
+    font-weight: 600;
+    font-size: 3em;
+    line-height: 28px;
+  }
+
+  &__text {
+    margin-bottom: 45px;
+    color: $dark-grey;
+    font-size: 1.8em;
+    line-height: 28px;
+  }
+}
