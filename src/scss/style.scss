@@ -1,12 +1,18 @@
-@import '_reset';
-@import'_variables';
+@import "_reset";
+@import "_variables";
 
 body {
   font-family: $open-sans;
   font-size: 10px;
+  transition:
+    opacity 1s ease-in-out,
+    display 1s ease-in-out,
+    background-color 1s ease-in-out,
+    color 1s ease-in-out;
 }
 
 .main {
+  display: none;
   padding: 10vh 15vw 0 14vw;
 
   &__header {
@@ -38,7 +44,6 @@ body {
   }
 
   &__news {
-
   }
 
   &__signup {
@@ -95,17 +100,16 @@ body {
 }
 
 .logo {
-
 }
 
-
-@import 'header';
-@import 'hero';
-@import 'whatwedo';
-@import 'aboutus';
-@import 'successful';
-@import 'statistic';
-@import 'testimonials'; 
-@import 'news';
-@import 'signup';
-@import 'footer';
+@import "_loading";
+@import "header";
+@import "hero";
+@import "whatwedo";
+@import "aboutus";
+@import "successful";
+@import "statistic";
+@import "testimonials";
+@import "news";
+@import "signup";
+@import "footer";
