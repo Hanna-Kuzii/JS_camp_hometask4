@@ -66,9 +66,6 @@ body {
     margin-top: 20vh;
   }
 
-  &__signup {
-  }
-
   &__footer {
     margin-top: 90px;
   }
@@ -151,14 +148,14 @@ body {
   }
 }
 
-@import "_loading";
-@import "header";
-@import "hero";
-@import "whatwedo";
-@import "aboutus";
-@import "successful";
-@import "statistic";
-@import "testimonials";
-@import "news";
-@import "signup";
-@import "footer";
+@import "./loading.scss";
+@import "./header.scss";
+@import "./hero.scss";
+@import "./whatwedo.scss";
+@import "./aboutus.scss";
+@import "./successful.scss";
+@import "./statistic.scss";
+@import "./testimonials.scss";
+@import "./news.scss";
+@import "./signup.scss";
+@import "./footer.scss";
