@@ -5,11 +5,14 @@
   gap: 7vw;
 
   &__picture {
-
+    &.content__picture::after {
+      top: -6%;
+      left: -6%;
+    }
   }
 
   &__content {
-
+    max-width: 546px;
   }
 
   &__subtitle {

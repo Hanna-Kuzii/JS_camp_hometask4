@@ -5,3 +5,83 @@
     text-align: center;
   }
 }
+
+.carousel-control-prev-icon {
+  fill: #000;
+}
+
+.reviews {
+
+  &__buttons {
+    height: 30px;
+    margin-bottom: 80px;
+    display: flex;
+    gap: 50px;
+    justify-content: flex-end;
+  }
+
+  &__button {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+
+    &:hover {
+      background-color: $dark-green;
+      .reviews__button_arrow {
+        color: #fff;
+      }
+    }
+
+    &_arrow {
+      color: #000;
+      font-size: 2em;
+    }
+  }
+  &__inner {
+    overflow: visible;
+  }
+
+  &__item {
+    float: right;
+    border-radius: 70px 0;
+    box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
+  }
+}
+
+.review {
+  margin-right: 0;
+  height: 225px;
+  max-width: 570px;
+  width: 45%;
+  padding: 50px 30px 50px 90px;
+  box-sizing: border-box;
+
+  &:first-child {
+    margin-left: 15%;
+  }
+
+  &__description {
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 2.4em;
+  }
+
+  &__text {
+    overflow: hidden;
+    font-size: 1.8em;
+    line-height: 28px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 25%;
+    left: -11%;
+    max-width: 130px;
+    max-height: 130px;
+    border-radius: 35px 0;
+  }
+}

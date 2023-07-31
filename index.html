@@ -8,6 +8,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600&family=Raleway:wght@500&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"> -->
+
     <link rel="stylesheet" href="/src/style/style.css">
     <title>Decbase</title>
 </head>
@@ -22,40 +27,43 @@
     </div>
 
     <div class="main">
-        <div class="main__header header">
-            <div class="header__logo">
-                <img src="/src/image/logo.svg" alt="decbase" class="header__img logo">
+        <div class="main__header header" id="home">
+            <div class="header__container">
+                <div class="header__logo">
+                    <img src="/src/image/logo.svg" alt="decbase" class="header__img logo">
+                </div>
+                <div class="header__navigation navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="#home" class="navigation__link">HOME</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#project" class="navigation__link">PROJECT</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#services" class="navigation__link">SERVICES</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#about" class="navigation__link">ABOUT</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#blog" class="navigation__link">BLOG</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#shop" class="navigation__link">SHOP</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="#contact" class="navigation__link">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__sign sign">
+                    <input type="button" value="Sign up" class="sign__button">
+                </div>
             </div>
-            <div class="header__navigation navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">HOME</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">PROJECT</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">SERVICES</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">ABOUT</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">BLOG</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">SHOP</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="" class="navigation__link">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="header__sign sign">
-                <input type="button" value="Sign up" class="sign__button">
-            </div>
+            <div class="header__progress-bar"></div>
         </div>
-        <div class="main__hero hero">
+        <div class="main__hero hero" id="project">
             <div class="hero__content">
                 <div class="hero__subtitle content__subtitle">MODERN INTERIOR</div>
                 <div class="hero__title content__title">Create Your Interior Design.</div>
@@ -64,11 +72,11 @@
                     exercitation.</div>
                 <button class="hero__button content__button">CONTACT</button>
             </div>
-            <div class="hero__picture">
+            <div class="hero__picture content__picture">
                 <img src="/src/image/hero_design.svg" alt="example design" class="hero__image content__image">
             </div>
         </div>
-        <div class="main__whatwedo whatwedo">
+        <div class="main__whatwedo whatwedo" id="services">
             <div class="whatwedo__titles">
                 <div class="whatwedo__subtitle content__subtitle">WHAT WE DO</div>
                 <div class="whatwedo__title content__title">Our Service</div>
@@ -76,46 +84,34 @@
             <div class="whatwedo__services services">
                 <div class="services__filter filter">
                     <fieldset class="filter__list">
-                        <div class="filter__item filter__item_choosed">
-                            <input type="radio" name="services__filter" id="All" class="filter__radio">
+                        <div class="filter__item">
+                            <input type="radio" name="service__filter" id="All" class="filter__radio" value="All">
                             <label for="All" class="filter__label">All</label>
                         </div>
                         <div class="filter__item">
-                            <input type="radio" name="services__filter" id="Some" class="filter__radio">
-                            <label for="Some" class="filter__label">Some</label>
+                            <input type="radio" name="service__filter" id="Asia" class="filter__radio" value="Asia">
+                            <label for="Asia" class="filter__label">Asia</label>
+                        </div>
+                        <div class="filter__item">
+                            <input type="radio" name="service__filter" id="Americas" class="filter__radio"
+                                value="Americas">
+                            <label for="Americas" class="filter__label">Americas</label>
+                        </div>
+                        <div class="filter__item">
+                            <input type="radio" name="service__filter" id="Europe" class="filter__radio" value="Europe">
+                            <label for="Europe" class="filter__label">Europe</label>
                         </div>
                     </fieldset>
                 </div>
                 <div class="services__examples examples">
                     <ul class="examples__list">
-                        <li class="examples__item service service_choosed">
-                            <div class="service__content">
-                                <object data="/src/image/sr.svg" type="image/svg+xml" alt="service"
-                                    class="service__picture"></object>
-                                <div class="service__description">
-                                    <div class="service__title">Interior Design1</div>
-                                    <div class="service__text">Lorem ipsum dolor amet consectetur adipiscing elit sed
-                                        eiusmod tempor incididunt ut labore.</div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="examples__item service">
-                            <div class="service__content">
-                                <object data="/src/image/sr.svg" type="image/svg+xml" alt="service"
-                                    class="service__picture"></object>
-                                <div class="service__description">
-                                    <div class="service__title">Interior Design1</div>
-                                    <div class="service__text">Lorem ipsum dolor amet consectetur adipiscing elit sed
-                                        eiusmod tempor incididunt ut labore.</div>
-                                </div>
-                            </div>
-                        </li>
+
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="main__aboutus aboutus">
-            <div class="aboutus__picture">
+        <div class="main__aboutus aboutus" id="about">
+            <div class="aboutus__picture content__picture">
                 <img src="/src/image/aboutus.svg" alt="example design" class="aboutus__image content__image">
             </div>
             <div class="aboutus__content">
@@ -132,29 +128,38 @@
         </div>
         <div class="main__successful successful">
             <div class="successful__content">
-                <img src="" alt="twenty years" class="successful__years">
+                <img src="/src/image/20years.svg" alt="twenty years" class="successful__years">
                 <div class="successful__title content__title">Years Of Successful Working The Market</div>
                 <button class="successful__button content__button">READ MORE</button>
             </div>
-            <div class="successful__picture">
+            <div class="successful__picture content__picture">
                 <img src="/src/image/succsseful.svg" alt="example design" class="successful__image content__image">
             </div>
         </div>
-        <div class="main__statistic statistic">
+        <div class="main__statistic statistic" id="shop">
             <div class="statistic__title content__title">3000+ Completed Work Which WE have Successfully Done</div>
-            <div class="statictic__content">
+            <div class="statistic__content">
                 <div class="statistic__item">
                     <div class="statistic__count">980</div>
                     <div class="statistic__description">Project</div>
                 </div>
+                <hr class="horizontal-line">
+                <hr class="vertical-line">
+                <hr class="horizontal-line">
                 <div class="statistic__item">
                     <div class="statistic__count">520</div>
                     <div class="statistic__description">Client</div>
                 </div>
+                <hr class="horizontal-line">
+                <hr class="vertical-line">
+                <hr class="horizontal-line">
                 <div class="statistic__item">
                     <div class="statistic__count">330</div>
                     <div class="statistic__description">Winners</div>
                 </div>
+                <hr class="horizontal-line">
+                <hr class="vertical-line">
+                <hr class="horizontal-line">
                 <div class="statistic__item">
                     <div class="statistic__count">120</div>
                     <div class="statistic__description">Recoment</div>
@@ -167,27 +172,66 @@
                 <div class="testimonials__title content__title">Client says about us</div>
             </div>
             <div class="testimonials__reviews">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="reviews__buttons">
+                        <button class="carousel-control-prev reviews__button" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="prev">
+                            <span class="reviews__button_arrow">&#60;</span>
+                        </button>
+                        <button class="carousel-control-next reviews__button" type="button"
+                            data-bs-target="#carouselExample" data-bs-slide="next">
+                            <span class="reviews__button_arrow">&#62;</span>
+                        </button>
+                    </div>
+                    <div class="reviews__inner carousel-inner">
+                        <div class="reviews__item review active">
+                            <div class="review__description">
+                                <div class="review__title">Louis Saville /CEO at Google inc</div>
+                                <div class="review__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            </div>
+                            <img src="/" alt="coctail" class="review__image">
+                        </div>
 
+                    </div>
+
+                </div>
             </div>
         </div>
-        <div class="main__news news">
+        <div class="main__news news" id="blog">
             <div class="news__titles">
                 <div class="news__subtitle content__subtitle">LATEST NEWS</div>
                 <div class="news__title content__title">From our blog</div>
             </div>
             <div class="news__notes">
                 <div class="news__post post">
-                    <img src="/src/image/news1.svg" alt="post__picture" class="post__image content__image">
+                    <div class="post__picture content__picture">
+                        <img src="/src/image/news1.svg" alt="post__picture" class="post__image content__image">
+                    </div>
                     <div class="post__title">2020 Interior Design Trends</div>
-                    <div class="post__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="post__text">The beauty of design is its ability to morph, adapt, and incorporate
+                        influences that enhance style and function. The interior design trends 2020 exemplify this in a
+                        way that tells a story. With their fingers on the pulse of the latest developments, our top
+                        online interior designers shared the trends that they are seeing this year. Hint: It’s
+                        interesting to see patterns unfolding that address our needs as society and environment even
+                        more. With all of this in mind, here are the top 10 must-see home Interior Design Trends 2020
+                        has to offer.</div>
                     <button class="post__button content__button">continue reading...</button>
                 </div>
                 <div class="news__post post">
-                    <img src="/src/image/news2.svg" alt="post__picture" class="post__image content__image">
+                    <div class="post__picture content__picture">
+                        <img src="/src/image/news2.svg" alt="post__picture" class="post__image content__image">
+                    </div>
                     <div class="post__title">28 Notable Product at ARC Interior Design</div>
-                    <div class="post__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="post__text">Interior design has progressively become a subject of interest among
+                        architects and designers. Having spent more time indoors recently, practitioners have been
+                        experimenting with their spaces and exploring different approaches to scale, comfort, and
+                        aesthetics. Much like everything else, design is highly influenced by external factors; any
+                        change to people's lifestyle influences how they respond to it, whether consciously or
+                        subconsciously. And while this dynamic is often seen in fashion or graphic design, it has been
+                        noticeable in interior design as well. Following years of linear, clean-cut, and refined spaces,
+                        curved silhouettes were revived, becoming one of the dominating interior design trends across
+                        the world. </div>
                     <button class="post__button content__button">continue reading...</button>
                 </div>
             </div>
@@ -200,11 +244,11 @@
             <form action="submit" class="signup__form form">
                 <input type="text" class="form__name form__element" placeholder="Enter your name...">
                 <input type="text" class="form__surname form__element" placeholder="Enter your surname...">
-                <input type="email" class="form__email form__element" placeholder="Enter your e-mail...">
-                <input type="button" value="SUBSCRIBE" class="form__button content__button">
+                <input type="email" class="form__email form__element" required placeholder="Enter your e-mail...">
+                <button type="submit" class="form__button content__button">SUBSCRIBE</button>
             </form>
         </div>
-        <div class="main__footer footer">
+        <div class="main__footer footer" id="contact">
             <div class="footer__container">
                 <div class="footer__company company">
                     <div class="company__info">
@@ -218,19 +262,19 @@
                     <div class="links__container">
                         <div class="links__title">Quick Links</div>
                         <ul class="links__items">
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">About Our Company</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Services WE Provide</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Career & Opportunity</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Privacy & policy</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Contact US</a>
                             </li>
                         </ul>
@@ -238,19 +282,19 @@
                     <div class="links__container">
                         <div class="links__title">Company</div>
                         <ul class="links__items">
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">About Company</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Our Testimonials</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Latest News</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Our misson</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Get a free Quot</a>
                             </li>
                         </ul>
@@ -258,16 +302,16 @@
                     <div class="links__container">
                         <div class="links__title">Contact Us</div>
                         <ul class="links__items">
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Sagrada Familia, Herba</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">Street Front USA</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">brandoxide@gmail.com</a>
                             </li>
-                            <li class="link__item">
+                            <li class="links__item">
                                 <a href="/" class="links__link">002-568423591</a>
                             </li>
                         </ul>
@@ -307,12 +351,16 @@
                 </div>
             </div>
             <hr>
-            <div class="footer__copyright">
-                Copyright @ 2020 Brandoxide.all right reserved.
+            <div class="footer__copyright copyright">
+                Copyright @ <span class="copyright__year"></span> Brandoxide.all right reserved.
             </div>
         </div>
     </div>
-    <script src="/src/index.js"></script>
+    <script type="module" src="/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 </body>
 
 </html>

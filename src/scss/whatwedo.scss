@@ -1,21 +1,21 @@
 @import "_variables";
 
 .whatwedo {
-  &__titles {
+  padding-right: 5vw;
+  padding-bottom: 15vh;
 
+
+  &__titles {
   }
 
   &__subtitle {
-
   }
 
   &__title {
     margin-bottom: 4vh;
-
   }
 
   &__services {
-
   }
 }
 
@@ -25,7 +25,6 @@
   }
 
   &__examples {
-
   }
 }
 
@@ -43,9 +42,10 @@
     width: 206px;
     background-color: $dark-green;
     color: $white;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     border: solid 5px $dark-green;
     border-radius: 20px;
+    cursor: pointer;
 
     &_choosed {
       background-color: $white;
@@ -61,18 +61,28 @@
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.6em;
+    cursor: inherit;
   }
 }
 
 .examples {
   &__list {
+    margin-bottom: 6vh;
     display: flex;
-    gap: 7%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
   }
 
   &__item {
     max-width: 477px;
     width: 30%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $brown;
+      color: $white;
+    }
   }
 }
 
@@ -84,16 +94,15 @@
 
   &__content {
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 20px;
   }
 
   &__picture {
-
+    width: 50px;
   }
 
   &__description {
-
   }
 
   &__title {
@@ -107,12 +116,12 @@
     line-height: 28px;
   }
 
-  &_choosed {
-    background-color: $brown;
-    color: $white;
+  // &_choosed {
+  //   background-color: $brown;
+  //   color: $white;
 
-    &  .service__picture path {
-      fill: $white;
-    }
-  }
+  //   &  .service__picture path {
+  //     fill: $white;
+  //   }
+  // }
 }

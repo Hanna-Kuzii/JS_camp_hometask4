@@ -1,11 +1,30 @@
 @import "_variables";
 
 .header {
-  display: flex;
-  align-items: center;
+  position: sticky;
+  top: 0;
+  // padding: 10px 0;
+  background-color: $white;
+  z-index: 2;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__progress-bar {
+    height: 5px;
+    width: 0;
+    background-color: $dark-green;
+    // position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    transition: width 0.3s ease;
+  }
 
   &__logo {
-    margin-right: 20vw;
+    margin-right: 15vw;
   }
 
   &__img {
@@ -15,7 +34,7 @@
   }
 
   &__sign {
-    margin-left: 3.3vw;
+    margin-left: 5vw;
   }
 }
 
@@ -24,15 +43,22 @@
 
   &__list {
     display: flex;
-    gap: 2vw;
+    gap: 1vw;
     justify-content: space-between;
   }
 
   &__item {
     // font-family: $open-sans;
+    padding: 5px 10px;
     color: $black;
     font-size: 1.6em;
     font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-green;
+      border: solid 1px $dark-green;
+    }
   }
 
   &__link {
