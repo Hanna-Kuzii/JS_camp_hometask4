@@ -28,7 +28,6 @@ document
     if (name.toLowerCase() === "sigma") {
       main.style.display = "none";
       const discountMessage = document.createElement("div");
-      // const main_page = document.querySelector(".main");
       discountMessage.textContent =
         "Today for users with the specified name when placing an order, a 120% discount =)";
       discountMessage.classList.add("discount-message");

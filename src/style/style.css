@@ -248,7 +248,9 @@ body {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
+  padding-top: 10px;
+  padding-bottom: 10px;
   top: 0;
   background-color: #fff;
   z-index: 2;
