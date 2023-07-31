@@ -6,7 +6,6 @@
 
   &__content {
     margin-top: 10%;
-
   }
 
   &__years {
@@ -17,5 +16,9 @@
     margin-bottom: 20px;
     font-size: 5em;
     line-height: 65px;
+  }
+
+  &__image {
+    height: 100%;
   }
 }

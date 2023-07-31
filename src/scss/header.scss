@@ -3,12 +3,12 @@
 .header {
   position: sticky;
   top: 0;
-  // padding: 10px 0;
   background-color: $white;
   z-index: 2;
 
   &__container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -16,7 +16,6 @@
     height: 5px;
     width: 0;
     background-color: $dark-green;
-    // position: fixed;
     top: 0;
     left: 0;
     z-index: 3;
@@ -27,19 +26,13 @@
     margin-right: 15vw;
   }
 
-  &__img {
-  }
-
-  &__navigation {
-  }
-
   &__sign {
     margin-left: 5vw;
   }
 }
 
 .navigation {
-  width: 40vw;
+  width: 45vw;
 
   &__list {
     display: flex;
@@ -48,7 +41,6 @@
   }
 
   &__item {
-    // font-family: $open-sans;
     padding: 5px 10px;
     color: $black;
     font-size: 1.6em;
@@ -59,9 +51,6 @@
       color: $dark-green;
       border: solid 1px $dark-green;
     }
-  }
-
-  &__link {
   }
 }
 
@@ -75,4 +64,32 @@
     border: none;
     border-radius: 15px 0;
   }
+}
+
+@media (max-width: 1281px) {
+  .header__logo {
+    margin-right: 10vw;
+  }
+}
+
+@media (max-width: 1025px) {
+  .header {
+
+    &__container {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    &__logo {
+    order: 1;
+  }
+
+  &__sign {
+    order: 2;
+  }
+
+  &__navigation {
+    order: 3;
+    width: 100%;
+  }
+}
 }

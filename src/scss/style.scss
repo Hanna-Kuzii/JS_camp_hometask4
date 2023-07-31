@@ -8,11 +8,13 @@ body {
     opacity 1s ease-in-out,
     display 1s ease-in-out,
     background-color 1s ease-in-out,
-    color 1s ease-in-out;
+    color 1s ease-in-out,
+    border-color 1s ease-in-out;
 }
 
 .main {
   display: none;
+  position: relative;
   padding-top: 5vh;
   scroll-padding-top: 60px;
   overflow: hidden;
@@ -24,10 +26,6 @@ body {
   background-image: url(/src/image/dots.svg);
   background-repeat: no-repeat;
   background-position: 0%% 100%;
-
-  &__header {
-    // margin-bottom: 8.5vh;
-  }
 
   &__hero {
     margin-top: 8.5vh;
@@ -119,9 +117,8 @@ body {
 
   &__picture {
     position: relative;
-    // max-width: 679px;
-    // width: 35vw;
     border-radius: 140px 0;
+    height: 100%;
 
     &::after {
       position: absolute;
@@ -142,7 +139,16 @@ body {
   }
 }
 
-.logo {
+@media (max-width: 1281px) {
+  .main > * {
+    padding: 0 10vw 0 10vw;
+  }
+}
+
+@media (max-width: 769px) {
+  body {
+    font-size: 8px;
+  }
 }
 
 @import "_loading";

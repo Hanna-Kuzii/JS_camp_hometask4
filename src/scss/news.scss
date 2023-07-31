@@ -18,6 +18,7 @@
   }
 
   &__post {
+    width: 50%;
     max-width: 670px;
   }
 }
@@ -46,15 +47,14 @@
   &__picture {
     max-width: 554px;
     max-height: 386px;
+    height: min-content;
     margin-bottom: 59px;
 
     &::after {
       top: 10%;
-      // left: 10%;
     }
   }
   &__image {
-    // position: relative;
     max-width: 555px;
     width: 100%;
   }

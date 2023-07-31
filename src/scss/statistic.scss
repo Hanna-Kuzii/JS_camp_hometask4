@@ -17,9 +17,6 @@
   &__content {
     position: relative;
     min-height: 278px;
-    display: grid;
-    grid-template-columns: repeat(13, 1fr);
-    grid-template-rows: repeat(5, 1fr);
   }
 
   &__item {
@@ -136,5 +133,11 @@
   div:nth-of-type(4) {
     top: 15%;
     left: 88%;
+  }
+}
+
+@media (max-width: 1681px) {
+  .statistic__content hr:nth-of-type(3n+1) {
+    width: 97px;
   }
 }
