@@ -13,45 +13,65 @@ body {
 
 .main {
   display: none;
-  padding: 10vh 15vw 0 14vw;
+  padding-top: 5vh;
+  scroll-padding-top: 60px;
+
+  & > * {
+    padding: 0 15vw 0 14vw;
+  }
+
+  background-image: url(/src/image/dots.svg);
+  background-repeat: no-repeat;
+  background-position: 0%% 100%;
 
   &__header {
-    margin-bottom: 8.5vh;
+    // margin-bottom: 8.5vh;
   }
 
   &__hero {
-    margin-bottom: 20vh;
+    margin-top: 8.5vh;
+    background-image: url(/src/image/dots.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
   }
 
   &__whatwedo {
-    margin-bottom: 40vh;
+    margin-top: 15vh;
+    background-image: url(/src/image/dots.svg);
+    background-repeat: no-repeat;
+    background-position: 105% bottom;
+    background-size: 245px 254px;
   }
 
   &__aboutus {
-    margin-bottom: 20vh;
+    margin-top: 15vh;
+    padding-bottom: 15vh;
+    background-image: url(/src/image/dots.svg);
+    background-repeat: no-repeat;
+    background-position: 15% 100%;
   }
 
   &__successful {
-    margin-bottom: 20vh;
+    margin-top: 5vh;
   }
 
   &__statistic {
-    margin-bottom: 10vh;
+    margin-top: 20vh;
   }
 
   &__testimonials {
-    margin-bottom: 20vh;
+    margin-top: 10vh;
   }
 
   &__news {
+    margin-top: 20vh;
   }
 
   &__signup {
-    margin-bottom: 90px;
   }
 
   &__footer {
-    margin: 0 -15vw 0 -14vw;
+    margin-top: 90px;
   }
 }
 
@@ -74,7 +94,6 @@ body {
   }
 
   &__text {
-    // font-family: $open-sans;
     color: $dark-grey;
     font-size: 1.8em;
     font-weight: 400;
@@ -90,8 +109,31 @@ body {
     font-weight: 600;
     font-size: 1.8em;
     text-transform: uppercase;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
+  &__picture {
+    position: relative;
+    // max-width: 679px;
+    // width: 35vw;
+    border-radius: 140px 0;
+
+    &::after {
+      position: absolute;
+      content: ""; 
+      top: 6%;
+      left: 6%;
+      width: calc(100% - 20px); 
+      height: calc(100% - 20px); 
+      border-radius: 140px 0;
+      border: solid 2px #B0855B;
+      z-index: -1; 
+    }
+  }
   &__image {
     max-width: 679px;
     width: 35vw;
