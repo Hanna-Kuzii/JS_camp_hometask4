@@ -23,20 +23,20 @@ body {
     padding: 0 15vw 0 14vw;
   }
 
-  background-image: url(/src/image/dots.svg);
+  background-image: url(./src/image/dots.svg);
   background-repeat: no-repeat;
   background-position: 0%% 100%;
 
   &__hero {
     margin-top: 8.5vh;
-    background-image: url(/src/image/dots.svg);
+    background-image: url(./src/image/dots.svg);
     background-repeat: no-repeat;
     background-position: left bottom;
   }
 
   &__whatwedo {
     margin-top: 15vh;
-    background-image: url(/src/image/dots.svg);
+    background-image: url(./src/image/dots.svg);
     background-repeat: no-repeat;
     background-position: 105% bottom;
     background-size: 245px 254px;
@@ -45,7 +45,7 @@ body {
   &__aboutus {
     margin-top: 15vh;
     padding-bottom: 15vh;
-    background-image: url(/src/image/dots.svg);
+    background-image: url(./src/image/dots.svg);
     background-repeat: no-repeat;
     background-position: 15% 100%;
   }
