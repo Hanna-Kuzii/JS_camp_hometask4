@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
     timer = setTimeout(function () {
       waitForResponse().then((response) => {
         if (!response) {
-          alert("Window was closed.");
+          window.close();
         }
       });
     }, 60000);
