@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
           window.close();
         }
       });
-    }, 60000);
+    }, 6000);
   }
 
   function waitForResponse() {
