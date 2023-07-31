@@ -15,7 +15,18 @@ regionRadio.forEach((radio) => {
       .catch((error) => {
         console.error("Error loading countries:", error);
       });
+
+      const parentFilterItem = radio.closest(".filter__item");
+
+      document.querySelectorAll(".filter__item").forEach((item) => {
+        item.classList.remove("filter__item_choosed");
+      });
+    
+      parentFilterItem.classList.add("filter__item_choosed");
   });
+
+
+
 });
 
 loadCountries("All")

@@ -1,6 +1,6 @@
 import { getCocktails } from "./getData.js";
 
-async function createCocktailCarousel() {
+async function createCocktails() {
   const numberOfCocktails = 6;
   const cocktailsArray = [];
 
@@ -15,55 +15,65 @@ async function createCocktailCarousel() {
     const reviewsInner = document.querySelector(".reviews__inner");
     reviewsInner.innerHTML = "";
 
-    for (let i = 0; i < cocktailsArray.length; i++) {
-      const cocktail = cocktailsArray[i];
-      const cocktailName = cocktail.strDrink;
-      const cocktailImage = cocktail.strDrinkThumb;
-      const cocktailInstructions = cocktail.strInstructions;
+    for (let i = 0; i < cocktailsArray.length; i += 2) {
+      const firstCocktail = cocktailsArray[i];
+      const secondCocktail = cocktailsArray[i + 1];
 
-      const isActive = i < 2;
+      const isActive = i === 0; 
 
-      const carouselItem = document.createElement("div");
-      carouselItem.classList.add("reviews__item", "carousel-item", "review");
+      const reviewsPage = document.createElement("div");
+      reviewsPage.classList.add("reviews__page", "carousel-item");
       if (isActive) {
-        carouselItem.classList.add("active");
+        reviewsPage.classList.add("active");
       }
 
-      const reviewDescription = document.createElement("div");
-      reviewDescription.classList.add("review__description");
+      const firstCarouselItem = createCarouselItem(firstCocktail);
+      const secondCarouselItem = createCarouselItem(secondCocktail);
 
-      const reviewTitle = document.createElement("div");
-      reviewTitle.classList.add("review__title");
-      reviewTitle.textContent = cocktailName;
+      reviewsPage.appendChild(firstCarouselItem);
+      reviewsPage.appendChild(secondCarouselItem);
 
-      const reviewText = document.createElement("div");
-      reviewText.classList.add("review__text");
-      reviewText.textContent = cocktailInstructions;
-
-      reviewDescription.appendChild(reviewTitle);
-      reviewDescription.appendChild(reviewText);
-
-      const reviewImage = document.createElement("img");
-      reviewImage.src = cocktailImage;
-      reviewImage.alt = cocktailName;
-      reviewImage.classList.add("review__image", "d-block", "w-100");
-
-      carouselItem.appendChild(reviewDescription);
-      carouselItem.appendChild(reviewImage);
-
-      reviewsInner.appendChild(carouselItem);
+      reviewsInner.appendChild(reviewsPage);
     }
 
-    // Uncomment the following lines if you are using Owl Carousel
-    // $(".carousel").owlCarousel({
-    //   items: 2,
-    //   loop: true,
-    //   margin: 10,
-    //   nav: true,
-    // });
   } catch (error) {
     console.error("Error loading cocktails:", error);
   }
 }
 
-document.addEventListener("DOMContentLoaded", createCocktailCarousel);
+
+function createCarouselItem(cocktail) {
+  const cocktailName = cocktail ? cocktail.strDrink : "";
+  const cocktailImage = cocktail ? cocktail.strDrinkThumb : "";
+  const cocktailInstructions = cocktail ? cocktail.strInstructions : "";
+
+  const carouselItem = document.createElement("div");
+  carouselItem.classList.add("reviews__item", "review");
+
+  const reviewDescription = document.createElement("div");
+  reviewDescription.classList.add("review__description");
+
+  const reviewTitle = document.createElement("div");
+  reviewTitle.classList.add("review__title");
+  reviewTitle.textContent = cocktailName;
+
+  const reviewText = document.createElement("div");
+  reviewText.classList.add("review__text");
+  reviewText.textContent = cocktailInstructions;
+
+  reviewDescription.appendChild(reviewTitle);
+  reviewDescription.appendChild(reviewText);
+
+  const reviewImage = document.createElement("img");
+  reviewImage.src = cocktailImage;
+  reviewImage.alt = cocktailName;
+  reviewImage.classList.add("review__image", "d-block", "w-100");
+
+  carouselItem.appendChild(reviewDescription);
+  carouselItem.appendChild(reviewImage);
+
+  return carouselItem;
+}
+
+
+document.addEventListener("DOMContentLoaded", createCocktails);

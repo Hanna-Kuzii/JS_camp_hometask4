@@ -43,6 +43,12 @@
     overflow: visible;
   }
 
+  &__page {
+    height: auto;
+    // display: flex;
+    // justify-content: space-between;
+  }
+
   &__item {
     float: right;
     border-radius: 70px 0;
@@ -51,12 +57,22 @@
 }
 
 .review {
+  position: relative;
   margin-right: 0;
   height: 225px;
   max-width: 570px;
   width: 45%;
   padding: 50px 30px 50px 90px;
   box-sizing: border-box;
+
+  &:hover {
+    transform: scale(1.2);
+
+    .review__text {
+      overflow: visible;
+      white-space: normal;
+    }
+  }
 
   &:first-child {
     margin-left: 15%;
@@ -71,9 +87,11 @@
   }
 
   &__text {
-    overflow: hidden;
     font-size: 1.8em;
     line-height: 28px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   &__image {

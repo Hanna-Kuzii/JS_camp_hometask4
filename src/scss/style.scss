@@ -15,6 +15,7 @@ body {
   display: none;
   padding-top: 5vh;
   scroll-padding-top: 60px;
+  overflow: hidden;
 
   & > * {
     padding: 0 15vw 0 14vw;

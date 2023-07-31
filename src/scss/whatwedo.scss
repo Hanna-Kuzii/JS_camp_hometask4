@@ -4,27 +4,14 @@
   padding-right: 5vw;
   padding-bottom: 15vh;
 
-
-  &__titles {
-  }
-
-  &__subtitle {
-  }
-
   &__title {
     margin-bottom: 4vh;
-  }
-
-  &__services {
   }
 }
 
 .services {
   &__filter {
     margin-bottom: 9vh;
-  }
-
-  &__examples {
   }
 }
 
@@ -42,7 +29,6 @@
     width: 206px;
     background-color: $dark-green;
     color: $white;
-    // box-sizing: border-box;
     border: solid 5px $dark-green;
     border-radius: 20px;
     cursor: pointer;
@@ -102,9 +88,6 @@
     width: 50px;
   }
 
-  &__description {
-  }
-
   &__title {
     margin-bottom: 5px;
     font-weight: 700;
@@ -115,13 +98,4 @@
     font-size: 1.8em;
     line-height: 28px;
   }
-
-  // &_choosed {
-  //   background-color: $brown;
-  //   color: $white;
-
-  //   &  .service__picture path {
-  //     fill: $white;
-  //   }
-  // }
 }
